@@ -1,0 +1,961 @@
+//------------------------font-define
+
+@font-face { font-family:Robotobold;  src: url(/fonts/Roboto/Roboto-Bold.ttf);}
+@font-face { font-family:Robotoblack; src:url(/fonts/Roboto/Roboto-Black.ttf);}
+@font-face { font-family:Robotolight; src:url(/fonts/Roboto/Roboto-Light.ttf);}
+@font-face { font-family:Roboto; src:url(/fonts/Roboto/Roboto-Regular.ttf);}
+@font-face { font-family:Robotomedium; src:url(/fonts/Roboto/Roboto-Medium.ttf);}
+@font-face { font-family:Montez; src:url(/fonts/Montez/Montez-Regular.ttf);}
+@font-face { font-family:Lilita; src:url(/fonts/Lilita_One/LilitaOne-Regular.ttf);}
+
+//-----------------font-define end
+
+//------------Fontdefin
+$primaryfont:Roboto;
+$Secondaryfont:Robotomedium;
+$Tertiaryfont:Robotoblack;
+$Specialfont:Lilita;
+$Cursivefont:Montez;
+
+///color variable define
+$primarycolor:rgb(46, 46, 46);
+$Bluecolor:rgb(8, 31, 158);
+$Bluelight:rgb(51, 74, 201);
+$Bluemorelight:rgb(104, 123, 230);
+$Bluelightest:rgb(178, 217, 253);
+$whitecolor:hsl(0, 0%, 100%);
+$greycolor:rgb(235, 235, 235);
+$yellow:rgb(201, 255, 4);
+$deepyellow:rgb(163, 192, 58);
+$lightyellow:rgb(195, 212, 132);
+$gradient-1:linear-gradient(160deg, $whitecolor, $greycolor);
+
+//other variable items
+$transition: 0.7s;
+$transition-2:1s;
+$shadowblack: 3px 3px 10px rgb(77, 74, 74);
+$boxshadowgrey: 5px 5px 15px $greycolor;
+$borderdeepyellow: 2px $deepyellow solid;
+$borderblack: 2px black solid;
+$borderblue: 2px $Bluelight solid;
+
+
+
+*{
+    font-family:$primaryfont;
+    text-decoration:none;
+    color:$primarycolor;
+    padding:0;
+    margin:0;
+    transition:$transition;
+    scroll-behavior: smooth;
+}
+
+// general style
+img{
+    width:100%;
+    height:auto;
+}
+
+section{
+    height:100vh;
+    cursor:pointer;
+    width:100%;
+}
+
+.h2{
+    font-family:$Tertiaryfont;
+}
+
+.btn{
+    padding:15px;
+    margin-top: 50px;
+    appearance:none;
+    border:none;
+    box-shadow: none;
+    cursor:pointer;
+}
+
+
+
+
+
+
+//header design
+
+header{
+    position:fixed;
+    background:transparent;
+    width:100vw;
+    padding-top: 20px;
+    z-index:100;
+
+
+//header container
+
+    .header-container{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+        align-items:center;
+
+//header-logo design
+
+.header-logo a{
+    font-family:$Specialfont;
+    font-size:1.75rem;
+    color:$whitecolor;
+    cursor:pointer;
+    margin: 40px;
+
+    span{
+        font-family:$Cursivefont;
+        color:$Bluelightest;
+    }
+}
+
+//header-telephone design
+
+.head-tel{
+    background:$Bluelight;
+    padding: 20px 50px;
+    border-radius:40px 0% 0% 40px;
+
+    a{
+        color:$whitecolor;
+        font-family:$Secondaryfont;
+        transition:$transition;
+
+    }
+}
+
+.head-tel a:hover{
+    color:$yellow;
+    font-family:$Tertiaryfont;
+    letter-spacing:1px;
+}
+.head-tel:hover{
+    background:none;
+    border-radius:0px;
+    border-color: $yellow;
+    border-width:2px;
+    border-style:solid;
+    padding: 10px 20px;
+    margin-right: 50px;
+}
+
+//mobile-hamburger define
+.hamburger{display:none;
+}
+
+
+
+//Navitation bar Design
+
+.nav-style{
+    margin:20px 0px;
+
+    a{
+        color:$whitecolor;
+        font-family:$Secondaryfont;
+        transition:$transition;
+        padding:10px 15px;
+
+    }
+}
+
+.nav-style a:hover{
+    color:$Bluecolor;
+    font-family:$Tertiaryfont;
+    letter-spacing:1px;
+    background: $yellow;
+    font-size: 13px;
+    margin: 0px 20px;
+}
+    }
+
+    .nav-mobile{
+        display:none;
+    }
+}
+
+
+//HOME DESIGN
+
+//LANDING PAGE DESIGN
+.landing{
+    background-image: linear-gradient(to top, rgba(7, 4, 190, 0.986), rgba(33, 30, 250, 0.801)), url(/imgs/others/images-1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: right;
+    transition:$transition-2;
+    width:100%;
+
+    .landing-bg-right{
+        content:"";
+        height:100%;
+        background:$yellow;
+        width:50%;
+        float:right;
+        border-radius:100% 0;
+        opacity:.7;
+        transition: $transition-2;
+    }
+
+    .right-img{
+        position:absolute;
+        width: 50vw;
+        right:0;
+        top:0;
+        z-index:1;
+
+        img{
+            height:auto;
+            width:80%;
+            transition: $transition-2;
+        }
+    }
+    .left-img{
+        position:absolute;
+        width: 50vw;
+        right:0;
+        top:0;
+        z-index:1;
+
+        img{
+            height:auto;
+            width:80%;
+            opacity:0;
+            transition: $transition-2;
+        }
+    }
+
+    .landing-container{
+        height:100%;
+        width:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:50;
+    }
+
+    .landing-content{
+        margin:0px 50px;
+
+        h2{
+           font-size: 3rem;
+           color:$whitecolor;
+
+           span{
+            font-family:$Specialfont;
+            font-size: 5rem;
+            color:$yellow
+           }
+        }
+        h4, span{
+            color:$Bluelight;
+            color:$whitecolor;
+            font-size: 1.2rem;
+            padding: 5px 20px 0px 0px;
+        }
+        h4 span{
+            color:$yellow;
+            padding:0;
+            transition: $transition;
+        }
+
+        button{
+            background-image: linear-gradient(150deg, $deepyellow, $whitecolor);
+            transition: $transition-2;
+       
+            a{
+                color:$primarycolor;
+                font-family:$Tertiaryfont;
+                font-size: .75rem;
+            }
+       
+        }
+    }
+}
+
+
+//landing page hover design
+
+.landing:hover{
+    background-image: linear-gradient(to top, rgba(7, 4, 190, 0.986), rgba(33, 30, 250, 0.801)), url(/imgs/others/images-6.jpg);
+
+    .landing-bg-right{
+        content:"";
+        height:100%;
+        background:$yellow;
+        width:50%;
+        float:right;
+        border-radius:0 100%;
+        opacity:.7;
+        transition: $transition-2;
+    }
+
+    
+    .landing-content{
+        margin:0px 50px;
+
+        h2{
+            color:$yellow;
+           span{
+            font-family:$Specialfont;
+            font-size: 5rem;
+            letter-spacing:17px;
+            color:$greycolor;
+            }
+        }
+
+        h4 span{
+            font-family:$Specialfont;
+            padding:0 5px;
+            letter-spacing: 2px;
+        }
+
+            }
+
+    .right-img{
+
+        img{
+            height:auto;
+            width:80%;
+            opacity:0;
+        }
+    }
+    .left-img{
+
+        img{
+            height:auto;
+            width:80%;
+            opacity:1;
+        }
+    }
+}
+.landing-container button:hover{
+    background-image:none;
+    background:none;
+    border-radius: 50px;
+    border-color:$yellow;
+    border-width: 2px;
+    border-style:solid;
+
+    a{
+        color:$whitecolor;
+        letter-spacing: 2px;
+
+    }
+
+}
+
+
+//HOME-ABOUT US DESIGN
+.home-about{
+    background-image: linear-gradient(50deg, $whitecolor, rgba(236, 233, 233, 0.308)), url(/imgs/patterns/tiling.png);
+    height:100vh;
+    padding: 100px 0;
+
+
+.home-about-container{
+    margin: 0 100px;
+    padding-top: 100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    .home-about-cards-design{
+        background-image:$gradient-1;
+        box-shadow: $boxshadowgrey;
+        padding: 15px;
+        margin-right: 40px;
+        display:flex;
+
+
+    }
+
+    .home-about-content{
+        padding: 40px 0;
+        width:70%;
+
+        h4{
+            color:$deepyellow;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            color:$Bluecolor;
+        }
+        .line{
+            content:"";
+            height:2px;
+            width:100%;
+            background:$deepyellow;
+            margin: 20px 0px;
+        }
+
+        .text-abt{
+            margin:15px 30px;
+
+            .number{
+                display:none;
+            }
+
+            h5{
+                font:$Secondaryfont;
+                font-size: .95rem;
+                color:$Bluelight;
+                margin-bottom: 10px;
+            }
+
+            p{
+                color:black;
+                font-family:$primaryfont;
+                text-align:justify;
+                margin-bottom: 30px;
+            }
+        }
+  
+
+        .text-abt-btn{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            .btn{
+                margin:0 10px;
+                background:$Bluecolor;
+                border-radius:20px;
+                transition: $transition;
+            }
+
+            #get-started{
+                background:transparent;
+                box-shadow:$boxshadowgrey;
+                border: $borderblue;
+                transition: $transition-2;
+             
+                a{
+                    color:$Bluecolor;
+                    font-family:$Tertiaryfont;
+                }
+
+            }
+
+            #get-started:hover{
+                background:$Bluelight;
+             
+                a{
+                    color:$whitecolor;
+                    padding: 0px 10px;
+                    font-family:$primaryfont;
+                }
+
+            }
+
+
+
+            #learn-more{
+                background:$Bluelight;
+                transition: $transition-2;
+             
+                a{
+                    color:$whitecolor;
+                    padding: 0px 10px;
+                    font-family:$primaryfont;
+                }
+
+            }
+
+            #learn-more:hover{
+                background:transparent;
+                box-shadow:$boxshadowgrey;
+                border: $borderblue;
+             
+                a{
+                    color:$Bluecolor;
+                    font-family:$Tertiaryfont;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//DESIGN AT MEDIA STYLE
+@media (max-width:900px) {
+
+
+            header{
+                position:fixed;
+                background:transparent;
+                width:100vw;
+                padding: 25px 0px;
+            
+            
+                //header container
+                
+                    .header-container{
+                        display:flex;
+                        width:100%;
+                
+                //header-logo design
+                
+                .header-logo a{
+                    font-family:$Specialfont;
+                    font-size:1.75rem;
+                    color:$whitecolor;
+                    cursor:pointer;
+                    margin: 40px;
+                
+                    span{
+                        font-family:$Cursivefont;
+                        color:$Bluelightest;
+                    }
+                }
+                
+                //header-telephone design
+                
+                .head-tel{
+                display:none;
+                }
+
+
+        //mobile-hamburger define
+        .hamburger{
+            margin: -10px 40px 0px 0px;
+            position:relative;
+            display:block;
+            width:30px;
+            height:30px;
+            cursor:pointer;
+            appearance: none;
+            background:none;
+            outline:none;
+            border:none;
+        }
+
+        .hamburger:before, .hamburger:after{
+            content:"";
+            display:block;
+            width:100%;
+            height:4px;
+            background-color:$whitecolor;
+            margin:6px 0px;
+            transition: $transition;
+        }
+
+        .hamburger .bar{
+            content:"";
+            display:block;
+            width:70%;
+            height:4px;
+            background-color:$whitecolor;
+            margin:6px 0px;
+            transition: $transition;
+        }
+
+        .hamburger.is-active::before{
+            transform: rotate(-45deg) translate(-9px, 4px);
+            background:$greycolor;
+
+        }
+
+        .hamburger.is-active:after{
+        transform: rotate(45deg) translate(-9px, -6px);
+        background:$yellow;
+
+        }
+
+        .hamburger.is-active .bar{
+            opacity:0;
+        }
+
+
+                //Navitation bar Design
+                
+                .nav-style{
+                    display:none;
+
+                }
+                    }
+                
+                    .nav-mobile{
+                        display:flex;
+                        flex-direction:column;
+                        position:fixed;
+                        align-items:center;
+                        justify-content:center;
+                        background: $Bluecolor;
+                        padding:30px;
+                        width:100vw;
+                        height:100vh;
+                        z-index:-1;
+                        top:0;
+                        left:100%;
+                        transition:$transition;
+
+                        a{
+                            color:$whitecolor;
+                            font-family:$primaryfont;
+                            font-size: 2.5rem;
+                            letter-spacing: .5px;
+                            padding-bottom: 20px;
+                        }
+
+                        .info{
+                            position:absolute;
+                            margin-top:85%;
+
+                            a{
+                                font-size: 18px;
+                                color:$Bluelightest;
+                            }
+                        }
+
+
+                    }
+
+                    
+                    .nav-mobile.is-active{
+                        left:0;
+                    }
+
+                    .nav-mobile:hover{
+                        background-image: linear-gradient(to top, rgba(4, 4, 173, 0.212), rgba(63, 63, 255, 0.185)), url(/imgs/others/half_circle.png);
+
+                        a:hover{
+                            background:$yellow;
+                            padding: 5px 15px;
+                            color:$primarycolor;
+                        }
+                    }
+
+
+            }
+
+
+
+//HOME DESIGN
+
+//LANDING PAGE DESIGN
+    .landing{
+        background-image: linear-gradient(to top, rgba(7, 4, 190, 0.514), rgba(33, 30, 250, 0.801)), url(/imgs/others/images-1.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+        transition:$transition;
+        position:relative;
+        height:100%;
+        max-width: 100%;
+
+        .landing-bg-right{
+            display:none;
+
+        }
+
+        .right-img, .left-img{
+            display:none;
+
+        }
+
+        .landing-container{
+            padding: 150px 0px;
+            height:100%;
+            width:100%;
+            z-index:50;
+            display:block;
+            align-items:center;
+            justify-content: center;
+        }
+
+        .landing-content{
+            margin-right:10%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+            h2{
+                font-size: 37px;
+                text-align:center;
+
+                span{
+                    font-size: 3.5rem;
+                    text-align:center;
+                }
+            }
+
+            h4{
+                text-align: center;
+                font-size:1.1rem;
+                line-height: 25px;
+            }
+        
+         
+            .btn{
+                margin-top: 30px;
+
+                a{
+                    color: $Bluecolor;
+                    font-size: 17px;
+                }
+            }
+
+                }
+    }
+
+
+    //landing page hover design
+
+    .landing:hover{
+        background-image: linear-gradient(to top, rgba(7, 4, 190, 0.459), rgba(33, 30, 250, 0.801)), url(/imgs/others/images-6.jpg);
+
+        
+        .landing-content{
+            margin:0px 50px;
+
+            h2{
+                letter-spacing:1px;
+                span{
+                    font-size: 3rem;
+                    letter-spacing:5px;
+                }
+                }
+            }
+
+            h4 span{
+                font-family:$Specialfont;
+                padding:0 5px;
+                letter-spacing: 2px;
+            }
+
+            
+        }
+
+        
+        .btn:hover{
+            background-image:none;
+            background:none;
+            border-radius: 50px;
+            border-color:$yellow;
+            border-width: 2px;
+            border-style:solid;
+
+            a:hover{
+                color:$whitecolor;
+                font-size: 15px;
+            }
+    
+        }
+            
+
+
+//HOME-ABOUT US DESIGN
+.home-about{
+    background-image: linear-gradient(-95deg, $whitecolor, rgba(247, 247, 247, 0.308)), url(/imgs/patterns/tiling.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100%;
+    padding: 40px 0px 100px 0;
+    margin:0;
+    width: 100%;
+
+
+.home-about-container{
+    height: 100%;
+    width:auto;
+    margin: 0;
+    padding-top: none;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+    .home-about-cards-design{
+        width: 85%;
+        background-image:$gradient-1;
+        box-shadow:$boxshadowgrey;
+        padding:0;
+        margin:0;
+
+        img{
+            border-radius: 15px;
+        }
+
+
+    }
+
+    .home-about-content{
+        padding: 40px 0;
+        width:100%;
+
+        h4{
+            color:$deepyellow;
+            margin-bottom: 15px;
+            text-align:center;
+        }
+
+        h2{
+            color:$Bluecolor;
+            text-align:center;
+        }
+        .line{
+            content:"";
+            height:2px;
+            width:100%;
+            background:$deepyellow;
+            margin: 20px 0px;
+        }
+
+        .text-abt{
+            margin:15px 30px;
+            position:relative;
+
+            .number{
+                display:block;
+                position:absolute;
+                font-size: 5rem;
+                top:0;
+                margin: 50px 100px;
+
+                h1{
+                    color:$Bluelight;
+                    opacity: .2;
+                }
+            }
+
+            h5{
+                font:$Secondaryfont;
+                font-size: 1.2rem;
+                color:$Bluelight;
+                margin-bottom: 10px;
+            }
+
+            p{
+                color:black;
+                font-family:$primaryfont;
+                font-size: 18px;
+                text-align:justify;
+                margin-bottom: 40px;
+            }
+        }
+  
+
+        .text-abt-btn{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            .btn{
+                margin:0 10px;
+                background:$Bluecolor;
+                border-radius:20px;
+                transition: $transition;
+            }
+
+            #get-started{
+                background:transparent;
+                box-shadow:$boxshadowgrey;
+                border: $borderblue;
+                transition: $transition-2;
+             
+                a{
+                    color:$Bluecolor;
+                    font-family:$Tertiaryfont;
+                }
+
+            }
+
+            #get-started:hover{
+                background:$Bluelight;
+             
+                a{
+                    color:$whitecolor;
+                    padding: 0px 10px;
+                    font-family:$primaryfont;
+                }
+
+            }
+
+
+
+            #learn-more{
+                background:$Bluelight;
+                transition: $transition-2;
+             
+                a{
+                    color:$whitecolor;
+                    padding: 0px 10px;
+                    font-family:$primaryfont;
+                }
+
+            }
+
+            #learn-more:hover{
+                background:transparent;
+                box-shadow:$boxshadowgrey;
+                border: $borderblue;
+             
+                a{
+                    color:$Bluecolor;
+                    font-family:$Tertiaryfont;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+   
+
+
+
