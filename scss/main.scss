@@ -25,10 +25,12 @@ $Bluemorelight:rgb(104, 123, 230);
 $Bluelightest:rgb(178, 217, 253);
 $whitecolor:hsl(0, 0%, 100%);
 $greycolor:rgb(235, 235, 235);
+$greycolor2:rgb(151, 151, 151);
 $yellow:rgb(201, 255, 4);
 $deepyellow:rgb(163, 192, 58);
 $lightyellow:rgb(195, 212, 132);
 $gradient-1:linear-gradient(160deg, $whitecolor, $greycolor);
+$gradient-2:linear-gradient(160deg, $Bluelight, $Bluecolor);
 
 //other variable items
 $transition: 0.7s;
@@ -354,7 +356,7 @@ header{
 //HOME-ABOUT US DESIGN
 .home-about{
     background-image: linear-gradient(50deg, $whitecolor, rgba(236, 233, 233, 0.308)), url(/imgs/patterns/tiling.png);
-    height:100vh;
+    height:100%;
     padding: 100px 0;
 
 
@@ -488,6 +490,120 @@ header{
 }
 
 
+
+//HOME THIR SECTION DESIGN START HERE
+
+.website-design{
+
+    height:100%;
+
+    .website-design-container{
+        padding:50px 100px;
+        display:flex;
+
+            .website-design-content{
+                h2{
+                    color:$Bluecolor;
+                    margin-bottom: 10px;
+                    font-size: 2rem;
+                }
+
+                h5{
+                    color:black;
+                    font-size: 1.15rem;
+                }
+                h6{
+                    margin-top: 10px;
+                    color:$greycolor2;
+                    font-size: .85rem;
+                    line-height: 20px;
+                }
+            }
+
+                .website-design-content, .website-design-card{
+                    width: 50%;
+                    margin: 20px;
+                }
+
+            .card-item{
+                margin-top: 30px;
+                display:flex;
+                position:relative;
+
+                .card-item-left{
+                    width:50%;
+                }
+                .card-item-right{
+                    width:50%;
+                }
+
+                .items-design{
+                    position:relative;
+                    box-shadow:$boxshadowgrey;
+                    display:flex;
+                    align-items:center;
+                    justify-items:center;
+                    margin: 15px 20px;
+                    padding: 10px;
+
+                    h2{
+                        background:$Bluelight;
+                        padding: 10px;
+                        border-radius:100px;
+                        position:absolute;
+                        top:0;
+                        margin-left: -20px;
+                        margin-top:-1px;
+                        font-size: 1rem;
+                        color:white;
+                    }
+
+                    h3{
+                        font-size:1rem;
+                        margin-left: 40px;
+                        color:$greycolor2;
+                        font-family:$primaryfont;
+                    }
+                }
+
+            }
+
+            .website-design-card{
+                align-items:center;
+                justify-content:center;
+                padding-top: 80px;
+            
+            }
+
+
+                .items-design:hover{
+                    background-image: $gradient-2;
+                    border-radius: 0px 0px 50px 0px;
+                  
+                    h2{
+                        background:$whitecolor;
+                        color:$Bluelight;
+                        border-width: 2px;
+                        border-color:$Bluelight;
+                        border-style:solid;
+                    }
+
+                    h3{
+                        color:$whitecolor;
+                    }
+            
+
+            }
+        
+        
+            
+
+
+
+
+
+    }
+}
 
 
 
@@ -934,6 +1050,96 @@ header{
 
 
 }
+
+
+//HOME THIR SECTION DESIGN START HERE
+
+.website-design{
+
+    height:100%;
+    background:$whitecolor;
+
+    .website-design-container{
+        padding:70px 20px;
+        display:flex;
+        margin:0px;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+
+            .website-design-content{
+                padding:0px 30px;
+
+                h2{
+                    color:$Bluecolor;
+                    margin-bottom: 10px;
+                    font-size: 2rem;
+                }
+
+                h5{
+                    color:black;
+                    font-size: 1.3rem;
+                    padding-right: 20px;
+
+                }
+                h6{
+                    margin-top: 10px;
+                    color:$greycolor2;
+                    font-size: 1rem;
+                    line-height: 20px;
+                    text-align:justify;
+                }
+            }
+
+                .website-design-content, .website-design-card{
+                    width: 100%;
+                    margin: none;
+                }
+
+            .card-item{
+                margin-top: 30px;
+                display:block;
+                position:relative;
+
+                .card-item-left, .card-item-right{
+                    width:100%;
+                }
+
+                .items-design{
+
+                    h2{
+                        left:0;
+                    }
+
+                    h3{
+                        margin-left: 30px;
+                    }
+                }
+
+            }
+
+            .website-design-card{
+                padding-top: 10px;
+            
+            }
+
+
+               
+        
+        
+            
+
+
+
+
+
+    }
+}
+
+
+
+
+
 
 
 
